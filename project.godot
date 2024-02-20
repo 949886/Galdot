@@ -24,7 +24,7 @@ project/assembly_name="Gal"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 

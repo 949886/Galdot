@@ -11,12 +11,18 @@ config_version=5
 [application]
 
 config/name="Gal"
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
+State="*res://examples/state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Events="*res://examples/events.gd"
+
+[dialogue_manager]
+
+general/balloon_path="res://dialogue/styles/blue_archive/balloon.tscn"
 
 [dotnet]
 
@@ -24,7 +30,11 @@ project/assembly_name="Gal"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://test.dialogue", "res://examples/dialogue.dialogue", "res://examples/dialogue_for_point_n_click.dialogue", "res://examples/dialogue_with_input.dialogue", "res://dialogue/styles/blue_archive/dialogue_for_csharp.dialogue", "res://dialogue/styles/visual_novel/dialogue_for_visual_novel.dialogue", "res://dialogue/scenario/Abydos-1-1.dialogue")
 
 [rendering]
 

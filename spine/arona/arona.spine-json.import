@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://cvk8lw21iuqi"
+path="res://.godot/imported/arona.spine-json-cf325b568d4623744cf2b1c531b28a2c.spjson"
+
+[deps]
+
+source_file="res://spine/arona/arona.spine-json"
+dest_files=["res://.godot/imported/arona.spine-json-cf325b568d4623744cf2b1c531b28a2c.spjson"]
+
+[params]
+

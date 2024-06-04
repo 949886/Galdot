@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://dcy5bxp76qyht"
+path="res://.godot/imported/arona.atlas-6e551d1fd402e0fe71deaadb234cd955.spatlas"
+
+[deps]
+
+source_file="res://spine/arona/arona.atlas"
+dest_files=["res://.godot/imported/arona.atlas-6e551d1fd402e0fe71deaadb234cd955.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

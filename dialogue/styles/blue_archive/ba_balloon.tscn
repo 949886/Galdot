@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://d27l0waal3u1k"]
 
-[ext_resource type="Script" path="res://dialogue/styles/blue_archive/Balloon.cs" id="1_mb7ia"]
-[ext_resource type="PackedScene" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_7tjlj"]
-[ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://BA-Assets/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_e3pcm"]
-[ext_resource type="Texture2D" uid="uid://bi0xeve5nl41y" path="res://2024-02-21 08.08.51.png" id="3_5ujqn"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_gc4sg"]
-[ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="4_fyomm"]
-[ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_h57nm"]
-[ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://BA-Assets/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="7_rlsxf"]
+[ext_resource type="Script" path="res://dialogue/styles/blue_archive/Balloon.cs" id="1_87l2v"]
+[ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://BA-Assets/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_b75mb"]
+[ext_resource type="Texture2D" uid="uid://bi0xeve5nl41y" path="res://2024-02-21 08.08.51.png" id="3_s7rj3"]
+[ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="4_a0r7k"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="5_eewl6"]
+[ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_64i78"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="7_d8jqp"]
+[ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://BA-Assets/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="8_3m0jv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -88,7 +88,7 @@ Button/colors/font_focus_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/colors/font_hover_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/colors/font_pressed_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/font_sizes/font_size = 25
-Button/fonts/font = ExtResource("6_h57nm")
+Button/fonts/font = ExtResource("6_64i78")
 Button/styles/focus = SubResource("StyleBoxFlat_1g0ef")
 Button/styles/hover = SubResource("StyleBoxFlat_1g0ef")
 Button/styles/normal = SubResource("StyleBoxFlat_1g0ef")
@@ -96,7 +96,7 @@ Button/styles/pressed = SubResource("StyleBoxFlat_1g0ef")
 
 [node name="Balloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_mb7ia")
+script = ExtResource("1_87l2v")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -106,7 +106,7 @@ offset_top = -80.64
 offset_bottom = 80.64
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_e3pcm")
+texture = ExtResource("2_b75mb")
 expand_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -118,7 +118,7 @@ offset_top = -216.0
 offset_bottom = -0.421692
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_5ujqn")
+texture = ExtResource("3_s7rj3")
 expand_mode = 5
 
 [node name="Balloon" type="Panel" parent="."]
@@ -161,7 +161,7 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
 visible = false
 layout_mode = 2
-theme = ExtResource("4_fyomm")
+theme = ExtResource("4_a0r7k")
 bbcode_enabled = true
 text = "圣娅"
 fit_content = true
@@ -172,7 +172,7 @@ layout_mode = 2
 [node name="CharacterName" type="Label" parent="Balloon/Dialogue/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("4_fyomm")
+theme = ExtResource("4_a0r7k")
 theme_override_font_sizes/font_size = 36
 text = "圣娅"
 
@@ -180,7 +180,7 @@ text = "圣娅"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("4_fyomm")
+theme = ExtResource("4_a0r7k")
 theme_override_colors/font_color = Color(0.486275, 0.815686, 1, 1)
 theme_override_font_sizes/font_size = 26
 text = "茶话会
@@ -202,11 +202,11 @@ scroll_active = false
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_7tjlj")]
+[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("5_eewl6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("4_fyomm")
+theme = ExtResource("4_a0r7k")
 text = "…归根结底，伊甸园条约就是一个关于〖 摒弃仇恨 〗的约定 。"
 
 [node name="Choices" type="MarginContainer" parent="."]
@@ -228,7 +228,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
-script = ExtResource("3_gc4sg")
+script = ExtResource("7_d8jqp")
 response_template = NodePath("Choice")
 
 [node name="Panel" type="Panel" parent="Choices/ResponsesMenu"]
@@ -245,7 +245,7 @@ anchor_bottom = 1.0
 offset_left = -46.0
 offset_right = -2.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -262,7 +262,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 76.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 1
 stretch_mode = 4
 
@@ -274,7 +274,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -76.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 1
 stretch_mode = 4
 flip_h = true
@@ -295,7 +295,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 1
 stretch_mode = 4
 
@@ -307,7 +307,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -44.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -323,7 +323,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 1
 stretch_mode = 4
 
@@ -335,7 +335,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -44.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -352,7 +352,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 1
 stretch_mode = 4
 
@@ -364,7 +364,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -76.0
 grow_vertical = 2
-texture = ExtResource("7_rlsxf")
+texture = ExtResource("8_3m0jv")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true

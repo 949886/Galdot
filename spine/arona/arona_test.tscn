@@ -10,10 +10,12 @@ skeleton_file_res = ExtResource("2_gr0qj")
 [node name="Node2D" type="Node2D"]
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
-position = Vector2(309, 770)
-scale = Vector2(0.582902, 0.582902)
+position = Vector2(196, 602)
+scale = Vector2(0.360321, 0.360321)
 skeleton_data_res = SubResource("SpineSkeletonDataResource_8oxyv")
 preview_skin = "default"
 preview_animation = "25"
 preview_frame = false
 preview_time = 0.0
+
+[node name="SpineAnimationTrack" type="SpineAnimationTrack" parent="."]

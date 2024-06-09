@@ -4,10 +4,14 @@ using DialogueManagerRuntime;
 
 public partial class Balloon : CanvasLayer
 {
+  [Export(PropertyHint.Dir)] string audioFolder = "res://audios";
+
   Panel balloon;
   Label characterLabel;
   RichTextLabel dialogueLabel;
   VBoxContainer responsesMenu;
+  AudioStreamPlayer audioPlayer;
+
 
   Resource resource;
   Array<Variant> temporaryGameStates = new Array<Variant>();
@@ -40,6 +44,7 @@ public partial class Balloon : CanvasLayer
     characterLabel = GetNode<Label>("%CharacterName");
     dialogueLabel = GetNode<RichTextLabel>("%DialogueLabel");
     responsesMenu = GetNode<VBoxContainer>("%ResponsesMenu");
+    audioPlayer = GetNode<AudioStreamPlayer>("%AudioStreamPlayer");
 
     balloon.Hide();
 
@@ -137,6 +142,25 @@ public partial class Balloon : CanvasLayer
     {
       dialogueLabel.Call("type_out");
       await ToSignal(dialogueLabel, "finished_typing");
+    }
+
+    // Play audio and wait for audio to finish
+    if (dialogueLine.Tags.Count > 0)
+    {
+      foreach (var tag in dialogueLine.Tags)
+      {
+        GD.Print("Tag: " + tag);
+        if (tag.StartsWith("audio"))
+        {
+          var filename = dialogueLine.GetTagValue(tag);
+          if (string.IsNullOrEmpty(filename))
+            filename = tag.Split(':')[1].Trim();
+          GD.Print("Playing audio: " + audioFolder + "/" + filename);
+          audioPlayer.Stream = GD.Load<AudioStream>(audioFolder + "/" + filename);
+          audioPlayer.Play();
+          await ToSignal(audioPlayer, "finished");
+        }
+      }
     }
 
     // Wait for input

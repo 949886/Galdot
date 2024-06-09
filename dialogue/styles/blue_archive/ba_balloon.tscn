@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://dialogue/styles/blue_archive/Balloon.cs" id="1_87l2v"]
 [ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://BA-Assets/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_b75mb"]
-[ext_resource type="Texture2D" uid="uid://bi0xeve5nl41y" path="res://2024-02-21 08.08.51.png" id="3_s7rj3"]
 [ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="4_a0r7k"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="5_eewl6"]
 [ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_64i78"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="7_d8jqp"]
 [ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://BA-Assets/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="8_3m0jv"]
+[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_test.tscn" id="8_hnmia"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -97,6 +97,10 @@ Button/styles/pressed = SubResource("StyleBoxFlat_1g0ef")
 [node name="Balloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_87l2v")
+audioFolder = "res://BA-Assets/Audios/Vocal/CN/scenario/vol.1/ch.1/ep.1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -118,7 +122,6 @@ offset_top = -216.0
 offset_bottom = -0.421692
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_s7rj3")
 expand_mode = 5
 
 [node name="Balloon" type="Panel" parent="."]
@@ -369,3 +372,6 @@ expand_mode = 2
 stretch_mode = 4
 flip_h = true
 flip_v = true
+
+[node name="Node2D" parent="." instance=ExtResource("8_hnmia")]
+position = Vector2(394, -94)

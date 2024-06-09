@@ -1,4 +1,7 @@
 [submodule "addons/dialogue_manager"]
 	path = addons/dialogue_manager
 	url = https://github.com/LunarLibrary/godot_dialogue_manager.git
-	branch = package
+[submodule "assets"]
+	path = assets
+	url = https://github.com/LunarDrive/BA-Assets.git
+	branch = godot

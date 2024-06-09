@@ -23,6 +23,7 @@ Events="*res://examples/events.gd"
 [dialogue_manager]
 
 general/balloon_path="res://dialogue/styles/blue_archive/ba_balloon.tscn"
+general/uses_dotnet=true
 
 [dotnet]
 

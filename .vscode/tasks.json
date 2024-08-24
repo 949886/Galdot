@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "godot-build",
+            "command": "${godot.csharp.executablePath}",
+            "type": "process",
+            "args": [
+                "--build-solutions",
+                "--path",
+                "${workspaceRoot}",
+                "--no-window",
+                "-q"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // {
+        //     "label": "csharp-attach",
+        //     "command": "dotnet",
+        //     "type": "process",
+        //     "args": [
+        //         "attach",
+        //         "--pid",
+        //         "${command:pickProcess}"
+        //     ],
+        // }
+    ]
+}

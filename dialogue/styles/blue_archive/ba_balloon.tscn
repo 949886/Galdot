@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_64i78"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="7_d8jqp"]
 [ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://assets/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="8_3m0jv"]
-[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_test.tscn" id="8_hnmia"]
+[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_spine.tscn" id="8_hnmia"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)

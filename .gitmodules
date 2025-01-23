@@ -1,0 +1,4 @@
+[submodule "addons/dialogue_manager"]
+	path = addons/dialogue_manager
+	url = https://github.com/LunarLibrary/godot_dialogue_manager.git
+	branch = 2.44.3

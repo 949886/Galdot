@@ -5,12 +5,12 @@ Github Actions for Godot 4 CI/CD automation.
 ## Features
 
 - [x] Fully automated CI/CD pipeline for C# or GDScript projects. Supported platforms: 
-    - [x] Windows
-    - [x] Linux
-    - [x] macOS
-    - [x] Web (non-c# project only)
-    - [x] Android
-    - [ ] iOS
+	- [x] Windows
+	- [x] Linux
+	- [x] macOS
+	- [x] Web (non-c# project only)
+	- [x] Android
+	- [ ] iOS
 - [x] Create [github releases] automatically (needs write permissions, see [Write access to repository is not granted]).
 
 

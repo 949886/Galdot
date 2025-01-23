@@ -73,6 +73,14 @@ jobs:
         # Checkout
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+          submodules: recursive
+
+      # File structure
+      - name: Display structure of build files
+        run: ls -R ./
 
       # Setup .NET
       - name: Setup .NET SDK

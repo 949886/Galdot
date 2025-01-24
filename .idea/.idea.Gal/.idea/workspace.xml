@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39e24a0b-d4d0-438b-afb1-95fc65ce89bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/dialogue_manager" beforeDir="false" afterPath="$PROJECT_DIR$/addons/dialogue_manager" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/dialogue_manager/assets/icon.svg.import" beforeDir="false" afterPath="$PROJECT_DIR$/addons/dialogue_manager/assets/icon.svg.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/dialogue_manager/assets/responses_menu.svg.import" beforeDir="false" afterPath="$PROJECT_DIR$/addons/dialogue_manager/assets/responses_menu.svg.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/dialogue_manager/assets/update.svg.import" beforeDir="false" afterPath="$PROJECT_DIR$/addons/dialogue_manager/assets/update.svg.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/dialogue_manager/dialogue_manager.gd" beforeDir="false" afterPath="$PROJECT_DIR$/addons/dialogue_manager/dialogue_manager.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/BA" beforeDir="false" afterPath="$PROJECT_DIR$/assets/BA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/portraits_balloon/balloon.gd" beforeDir="false" afterPath="$PROJECT_DIR$/examples/portraits_balloon/balloon.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/test_scenes/csharp_scene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/test_scenes/csharp_scene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/test_scenes/visual_novel_scene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/test_scenes/visual_novel_scene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/visual_novel_balloon/balloon.gd" beforeDir="false" afterPath="$PROJECT_DIR$/examples/visual_novel_balloon/balloon.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/visual_novel_balloon/portraits/coco.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/visual_novel_balloon/portraits/coco.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/visual_novel_balloon/portraits/nathan.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/visual_novel_balloon/portraits/nathan.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "949886"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/949886/Gal.git",
+    "accountId": "9b99dc17-0f35-469e-8b37-1ba0ea064308"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2s4DIFE04ZGOGBzM3T67kBFcsFE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected=".NET Executable.Player">
+    <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory" show_console_on_std_err="false" show_console_on_std_out="false" port="6006">
+      <option name="address" value="127.0.0.1" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="D:/App/Godot/godot 4.3/Godot_v4.3-stable_mono_win64.exe" />
+      <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
+      <option name="WORKING_DIRECTORY" value="E:\Code\Game\Godot\Gal" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="RUNTIME_TYPE" value="coreclr" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Player" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="D:/App/Godot/godot 4.3/Godot_v4.3-stable_mono_win64.exe" />
+      <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot;" />
+      <option name="WORKING_DIRECTORY" value="E:\Code\Game\Godot\Gal" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="RUNTIME_TYPE" value="coreclr" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39e24a0b-d4d0-438b-afb1-95fc65ce89bc" name="Changes" comment="" />
+      <created>1737705873608</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737705873608</updated>
+      <workItem from="1737705875113" duration="1933000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

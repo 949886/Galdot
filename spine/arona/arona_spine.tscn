@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://byyxo6de8slh7"]
+
+[ext_resource type="Script" path="res://spine/arona/arona_spine.gd" id="1_dhqah"]
+[ext_resource type="SpineAtlasResource" uid="uid://dcy5bxp76qyht" path="res://spine/arona/arona.atlas" id="1_hi4c2"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://cvk8lw21iuqi" path="res://spine/arona/arona.spine-json" id="2_gr0qj"]
+
+[sub_resource type="SpineSkeletonDataResource" id="SpineSkeletonDataResource_8oxyv"]
+atlas_res = ExtResource("1_hi4c2")
+skeleton_file_res = ExtResource("2_gr0qj")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dhqah")
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+skeleton_data_res = SubResource("SpineSkeletonDataResource_8oxyv")
+preview_skin = "default"
+preview_animation = "25"
+preview_frame = false
+preview_time = 0.0
+position = Vector2(196, 602)
+scale = Vector2(0.360321, 0.360321)

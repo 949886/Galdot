@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ddxa7yncr00vt"
+path="res://.godot/imported/Abydos-1-1.dialogue-46aca2de9aa1a24aeb8244a0806aa56f.tres"
+
+[deps]
+
+source_file="res://dialogue/scenario/Abydos-1-1.dialogue"
+dest_files=["res://.godot/imported/Abydos-1-1.dialogue-46aca2de9aa1a24aeb8244a0806aa56f.tres"]
+
+[params]
+
+defaults=true

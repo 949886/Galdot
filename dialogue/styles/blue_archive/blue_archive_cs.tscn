@@ -1,0 +1,16 @@
+[gd_scene load_steps=6 format=3 uid="uid://c31cnn170lq45"]
+
+[ext_resource type="Script" path="res://dialogue/styles/blue_archive/BATestScene.cs" id="1_slcyv"]
+[ext_resource type="PackedScene" uid="uid://bgp2c3flg844q" path="res://dialogue/styles/blue_archive/ba_balloon.tscn" id="2_85je7"]
+[ext_resource type="PackedScene" uid="uid://cx7qpl641h6f" path="res://dialogue/styles/blue_archive/ba_small_balloon.tscn" id="3_6100d"]
+[ext_resource type="Resource" uid="uid://ddxa7yncr00vt" path="res://dialogue/scenario/Abydos-1-1.dialogue" id="4_bod8d"]
+[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_spine.tscn" id="5_mlila"]
+
+[node name="CSharpScene" type="Node2D"]
+script = ExtResource("1_slcyv")
+Balloon = ExtResource("2_85je7")
+SmallBalloon = ExtResource("3_6100d")
+DialogueResource = ExtResource("4_bod8d")
+
+[node name="Node2D" parent="." instance=ExtResource("5_mlila")]
+position = Vector2(-84, -11)

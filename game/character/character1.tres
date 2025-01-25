@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://dwsoemwdmf3gn"]
+
+[ext_resource type="Script" path="res://game/character/scripts/character.gd" id="1_bkcdv"]
+
+
+[resource]
+script = ExtResource("1_bkcdv")
+name = "dsadsa"
+subtitle = ""
+list = Array[String]([])
+texs = Array[Texture]([null])

@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Gal"
-run/main_scene="res://examples/test_scenes/visual_novel_scene.tscn"
+run/main_scene="res://dialogue/styles/blue_archive/blue_archive.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+Events="*res://examples/events.gd"
+State="*res://examples/state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]

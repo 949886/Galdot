@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7qfmajsklgsd"]
 
-[ext_resource type="Texture2D" uid="uid://d4c4m53fwfh4d" path="res://dialogue/styles/visual_novel/portraits/nathan.png" id="1_rcv1u"]
-
+[ext_resource type="Texture2D" uid="uid://d4c4m53fwfh4d" path="res://examples/visual_novel_balloon/portraits/nathan.png" id="1_rcv1u"]
 
 [node name="Nathan" type="Node2D"]
 

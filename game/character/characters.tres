@@ -2,8 +2,8 @@
 
 [ext_resource type="Resource" uid="uid://cbb0f5h8jobhk" path="res://game/character/Arona.tres" id="1_xmc77"]
 [ext_resource type="Texture2D" uid="uid://dqdrm5rljf1u0" path="res://assets/BA/Images/UIs/01_Common/01_Character/Student_Portrait_CH0070.png" id="2_166sv"]
-[ext_resource type="Script" path="res://game/character/scripts/character.gd" id="3_ayipc"]
-[ext_resource type="Script" path="res://game/character/scripts/characters.gd" id="4_hsjxi"]
+[ext_resource type="Script" uid="uid://y1h0vc2qja2e" path="res://game/character/scripts/character.gd" id="3_ayipc"]
+[ext_resource type="Script" uid="uid://dauyioufr0ed5" path="res://game/character/scripts/characters.gd" id="4_hsjxi"]
 
 [sub_resource type="Resource" id="Resource_03q1k"]
 script = ExtResource("3_ayipc")

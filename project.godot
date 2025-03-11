@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Gal"
 run/main_scene="res://dialogue/styles/blue_archive/blue_archive.tscn"
-config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,7 +23,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-general/uses_dotnet=true
+runtime/advanced/uses_dotnet=true
 
 [dotnet]
 

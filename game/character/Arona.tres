@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cbb0f5h8jobhk"]
 
-[ext_resource type="Script" path="res://game/character/scripts/character.gd" id="1_t53cg"]
+[ext_resource type="Script" uid="uid://y1h0vc2qja2e" path="res://game/character/scripts/character.gd" id="1_t53cg"]
 [ext_resource type="Texture2D" uid="uid://dy64abhkc4qgj" path="res://assets/BA/Images/UIs/00_Images/Image_Char_Arona2.png" id="1_tkwn0"]
 
 [resource]

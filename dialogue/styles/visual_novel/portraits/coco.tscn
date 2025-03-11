@@ -1,8 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://chur0yqvpxxja"]
 
-[ext_resource type="Script" path="res://dialogue/styles/visual_novel/portraits/coco.gd" id="1_lvpqe"]
-[ext_resource type="Texture2D" uid="uid://bg7dngh2kog5f" path="res://dialogue/styles/visual_novel/portraits/coco.png" id="2_2nynt"]
-
+[ext_resource type="Script" uid="uid://c6lbd3l6qqf5j" path="res://dialogue/styles/visual_novel/portraits/coco.gd" id="1_lvpqe"]
+[ext_resource type="Texture2D" uid="uid://bg7dngh2kog5f" path="res://examples/visual_novel_balloon/portraits/coco.png" id="2_2nynt"]
 
 [sub_resource type="Animation" id="Animation_j4dkb"]
 resource_name = "Meow"
@@ -38,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_un71v"]
 _data = {
-"Meow": SubResource("Animation_j4dkb"),
-"RESET": SubResource("Animation_bh7hh")
+&"Meow": SubResource("Animation_j4dkb"),
+&"RESET": SubResource("Animation_bh7hh")
 }
 
 [node name="Coco" type="Node2D"]

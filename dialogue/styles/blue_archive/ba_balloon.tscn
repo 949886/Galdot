@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgp2c3flg844q"]
+[gd_scene load_steps=18 format=3 uid="uid://bgp2c3flg844q"]
 
-[ext_resource type="Script" path="res://dialogue/styles/blue_archive/BABalloon.cs" id="1_87l2v"]
+[ext_resource type="Script" uid="uid://bladcpe8rl5bq" path="res://dialogue/styles/blue_archive/BABalloon.cs" id="1_87l2v"]
 [ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://assets/BA/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_b75mb"]
 [ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="4_a0r7k"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="5_eewl6"]
 [ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_64i78"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="7_d8jqp"]
 [ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://assets/BA/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="8_3m0jv"]
 [ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_spine.tscn" id="8_hnmia"]
 
@@ -186,8 +185,7 @@ size_flags_vertical = 8
 theme = ExtResource("4_a0r7k")
 theme_override_colors/font_color = Color(0.486275, 0.815686, 1, 1)
 theme_override_font_sizes/font_size = 26
-text = "茶话会
-"
+text = "茶话会"
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
 visible = false
@@ -226,13 +224,11 @@ theme = SubResource("Theme_j0bw8")
 theme_override_constants/margin_left = 150
 theme_override_constants/margin_right = 150
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Choices" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Choices"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
-script = ExtResource("7_d8jqp")
-response_template = NodePath("Choice")
 
 [node name="Panel" type="Panel" parent="Choices/ResponsesMenu"]
 custom_minimum_size = Vector2(0, 21.925)

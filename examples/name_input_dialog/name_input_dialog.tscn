@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cbho187ysok6y"]
 
-[ext_resource type="Script" path="res://examples/name_input_dialog/name_input_dialog.gd" id="1_jrtgd"]
+[ext_resource type="Script" uid="uid://dsc08vfgwutng" path="res://examples/name_input_dialog/name_input_dialog.gd" id="1_jrtgd"]
 
 [node name="NameInputDialog" type="AcceptDialog"]
 title = "Name"

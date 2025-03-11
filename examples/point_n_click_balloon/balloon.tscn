@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://chk6py6m8g356"]
 
-[ext_resource type="PackedScene" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_bgphs"]
-[ext_resource type="Script" path="res://examples/point_n_click_balloon/balloon.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_bgphs"]
+[ext_resource type="Script" uid="uid://sat7dc5qax5c" path="res://examples/point_n_click_balloon/balloon.gd" id="3"]
 
 [sub_resource type="Theme" id="Theme_miaqt"]
 default_font_size = 26

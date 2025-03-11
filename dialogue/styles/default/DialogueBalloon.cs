@@ -5,8 +5,8 @@ namespace DialogueManagerRuntime
 {
   public partial class DialogueBalloon : CanvasLayer
   {
-    const string NEXT_ACTION = "ui_accept";
-    const string SKIP_ACTION = "ui_cancel";
+    [Export] public string NextAction = "ui_accept";
+    [Export] public string SkipAction = "ui_cancel";
 
 
     Control balloon;
@@ -25,10 +25,6 @@ namespace DialogueManagerRuntime
       get => dialogueLine;
       set
       {
-        isWaitingForInput = false;
-        balloon.FocusMode = Control.FocusModeEnum.All;
-        balloon.GrabFocus();
-
         if (value == null)
         {
           QueueFree();
@@ -36,9 +32,11 @@ namespace DialogueManagerRuntime
         }
 
         dialogueLine = value;
-        UpdateDialogue();
+        ApplyDialogueLine();
       }
     }
+
+    Timer MutationCooldown = new Timer();
 
 
     public override void _Ready()
@@ -55,7 +53,7 @@ namespace DialogueManagerRuntime
         if ((bool)dialogueLabel.Get("is_typing"))
         {
           bool mouseWasClicked = @event is InputEventMouseButton && (@event as InputEventMouseButton).ButtonIndex == MouseButton.Left && @event.IsPressed();
-          bool skipButtonWasPressed = @event.IsActionPressed(SKIP_ACTION);
+          bool skipButtonWasPressed = @event.IsActionPressed(SkipAction);
           if (mouseWasClicked || skipButtonWasPressed)
           {
             GetViewport().SetInputAsHandled();
@@ -73,16 +71,32 @@ namespace DialogueManagerRuntime
         {
           Next(dialogueLine.NextId);
         }
-        else if (@event.IsActionPressed(NEXT_ACTION) && GetViewport().GuiGetFocusOwner() == balloon)
+        else if (@event.IsActionPressed(NextAction) && GetViewport().GuiGetFocusOwner() == balloon)
         {
           Next(dialogueLine.NextId);
         }
       };
 
+      if (string.IsNullOrEmpty((string)responsesMenu.Get("next_action")))
+      {
+        responsesMenu.Set("next_action", NextAction);
+      }
       responsesMenu.Connect("response_selected", Callable.From((DialogueResponse response) =>
       {
         Next(response.NextId);
       }));
+
+
+      // Hide the balloon when a mutation is running
+      MutationCooldown.Timeout += () =>
+      {
+        if (willHideBalloon)
+        {
+          willHideBalloon = false;
+          balloon.Hide();
+        }
+      };
+      AddChild(MutationCooldown);
 
       DialogueManager.Mutated += OnMutated;
     }
@@ -101,9 +115,24 @@ namespace DialogueManagerRuntime
     }
 
 
+    public override async void _Notification(int what)
+    {
+      // Detect a change of locale and update the current dialogue line to show the new language
+      if (what == NotificationTranslationChanged && IsInstanceValid(dialogueLabel))
+      {
+        float visibleRatio = dialogueLabel.VisibleRatio;
+        DialogueLine = await DialogueManager.GetNextDialogueLine(resource, DialogueLine.Id, temporaryGameStates);
+        if (visibleRatio < 1.0f)
+        {
+          dialogueLabel.Call("skip_typing");
+        }
+      }
+    }
+
+
     public async void Start(Resource dialogueResource, string title, Array<Variant> extraGameStates = null)
     {
-      temporaryGameStates = extraGameStates ?? new Array<Variant>();
+      temporaryGameStates = new Array<Variant> { this } + (extraGameStates ?? new Array<Variant>());
       isWaitingForInput = false;
       resource = dialogueResource;
 
@@ -120,12 +149,13 @@ namespace DialogueManagerRuntime
     #region Helpers
 
 
-    private async void UpdateDialogue()
+    private async void ApplyDialogueLine()
     {
-      if (!IsNodeReady())
-      {
-        await ToSignal(this, SignalName.Ready);
-      }
+      MutationCooldown.Stop();
+
+      isWaitingForInput = false;
+      balloon.FocusMode = Control.FocusModeEnum.All;
+      balloon.GrabFocus();
 
       // Set up the character name
       characterLabel.Visible = !string.IsNullOrEmpty(dialogueLine.Character);
@@ -184,14 +214,7 @@ namespace DialogueManagerRuntime
     {
       isWaitingForInput = false;
       willHideBalloon = true;
-      GetTree().CreateTimer(0.1f).Timeout += () =>
-      {
-        if (willHideBalloon)
-        {
-          willHideBalloon = false;
-          balloon.Hide();
-        }
-      };
+      MutationCooldown.Start(0.1f);
     }
 
 

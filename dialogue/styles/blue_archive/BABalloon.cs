@@ -2,9 +2,9 @@ using Godot;
 using Godot.Collections;
 using DialogueManagerRuntime;
 
-public partial class BABalloon : CanvasLayer
+public partial class BaBalloon : CanvasLayer
 {
-  [Export(PropertyHint.Dir)] string audioFolder = "res://audios";
+  [Export(PropertyHint.Dir)] string audioFolder = "res://assets/BA/Audios/Vocal/CN/scenario/vol.1/ch.1/ep.1";
 
   Panel balloon;
   Label characterLabel;

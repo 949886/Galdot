@@ -1,13 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgp2c3flg844q"]
+[gd_scene load_steps=19 format=3 uid="uid://c46hagqwsbvww"]
 
-[ext_resource type="Script" uid="uid://cu13xayklf6jr" path="res://dialogue/styles/blue_archive/BaBalloon.gd" id="1_uqcic"]
-[ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://assets/BA/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_b75mb"]
-[ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="4_a0r7k"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="5_eewl6"]
-[ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="6_64i78"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="6_sexfa"]
-[ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://assets/BA/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="8_3m0jv"]
-[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_spine.tscn" id="8_hnmia"]
+[ext_resource type="Script" uid="uid://bladcpe8rl5bq" path="res://dialogue/styles/blue_archive/BaBalloon.cs" id="1_4rsy4"]
+[ext_resource type="Texture2D" uid="uid://by8xugr1wo3b7" path="res://assets/BA/Images/UIs/03_Scenario/01_Background/bg_aronaroom.jpg" id="2_s0ags"]
+[ext_resource type="Theme" uid="uid://15skljnwxp26" path="res://dialogue/styles/blue_archive/ba_dialogue.theme" id="3_i3ivh"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_nni4h"]
+[ext_resource type="FontFile" uid="uid://nngtd7c6kb7w" path="res://dialogue/styles/blue_archive/fonts/ChillRoundGothic_Regular.otf" id="5_vadfa"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="6_8wqn8"]
+[ext_resource type="Texture2D" uid="uid://dahqfxvrus2km" path="res://assets/BA/Images/UIs/00_Images/Common_Bg_Texture_Type01.png" id="7_arcsa"]
+[ext_resource type="PackedScene" uid="uid://byyxo6de8slh7" path="res://spine/arona/arona_spine.tscn" id="8_ayyyp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -88,7 +88,7 @@ Button/colors/font_focus_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/colors/font_hover_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/colors/font_pressed_color = Color(0.0509804, 0.121569, 0.231373, 1)
 Button/font_sizes/font_size = 25
-Button/fonts/font = ExtResource("6_64i78")
+Button/fonts/font = ExtResource("5_vadfa")
 Button/styles/focus = SubResource("StyleBoxFlat_1g0ef")
 Button/styles/hover = SubResource("StyleBoxFlat_1g0ef")
 Button/styles/normal = SubResource("StyleBoxFlat_1g0ef")
@@ -96,7 +96,7 @@ Button/styles/pressed = SubResource("StyleBoxFlat_1g0ef")
 
 [node name="Balloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_uqcic")
+script = ExtResource("1_4rsy4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -109,7 +109,7 @@ offset_top = -80.64
 offset_bottom = 80.64
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_b75mb")
+texture = ExtResource("2_s0ags")
 expand_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -163,7 +163,7 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
 visible = false
 layout_mode = 2
-theme = ExtResource("4_a0r7k")
+theme = ExtResource("3_i3ivh")
 bbcode_enabled = true
 text = "圣娅"
 fit_content = true
@@ -174,7 +174,7 @@ layout_mode = 2
 [node name="CharacterName" type="Label" parent="Balloon/Dialogue/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("4_a0r7k")
+theme = ExtResource("3_i3ivh")
 theme_override_font_sizes/font_size = 36
 text = "圣娅"
 
@@ -182,7 +182,7 @@ text = "圣娅"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("4_a0r7k")
+theme = ExtResource("3_i3ivh")
 theme_override_colors/font_color = Color(0.486275, 0.815686, 1, 1)
 theme_override_font_sizes/font_size = 26
 text = "茶话会"
@@ -203,11 +203,11 @@ scroll_active = false
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("5_eewl6")]
+[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("4_nni4h")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("4_a0r7k")
+theme = ExtResource("3_i3ivh")
 text = "…归根结底，伊甸园条约就是一个关于〖 摒弃仇恨 〗的约定 。"
 
 [node name="Choices" type="MarginContainer" parent="."]
@@ -229,7 +229,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
-script = ExtResource("6_sexfa")
+script = ExtResource("6_8wqn8")
 response_template = NodePath("../BoxContainer/ResponseExample4")
 
 [node name="Panel" type="Panel" parent="Choices/ResponsesMenu"]
@@ -246,7 +246,7 @@ anchor_bottom = 1.0
 offset_left = -46.0
 offset_right = -2.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -263,7 +263,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 76.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 1
 stretch_mode = 4
 
@@ -275,7 +275,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -76.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 1
 stretch_mode = 4
 flip_h = true
@@ -296,7 +296,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 1
 stretch_mode = 4
 
@@ -308,7 +308,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -44.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -324,7 +324,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 1
 stretch_mode = 4
 
@@ -336,7 +336,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -44.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
@@ -353,7 +353,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 165.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 1
 stretch_mode = 4
 
@@ -365,11 +365,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -76.0
 grow_vertical = 2
-texture = ExtResource("8_3m0jv")
+texture = ExtResource("7_arcsa")
 expand_mode = 2
 stretch_mode = 4
 flip_h = true
 flip_v = true
 
-[node name="Node2D" parent="." instance=ExtResource("8_hnmia")]
+[node name="Node2D" parent="." instance=ExtResource("8_ayyyp")]
 position = Vector2(394, -94)

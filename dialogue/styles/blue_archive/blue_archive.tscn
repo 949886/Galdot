@@ -1,12 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://buxryn2qh7fod"]
+[gd_scene load_steps=4 format=3 uid="uid://buxryn2qh7fod"]
 
 [ext_resource type="Script" uid="uid://dlu6q4wy1lsuk" path="res://dialogue/styles/blue_archive/blue_archive.gd" id="1_btyv3"]
 [ext_resource type="PackedScene" uid="uid://bgp2c3flg844q" path="res://dialogue/styles/blue_archive/ba_balloon.tscn" id="2_22bjo"]
-[ext_resource type="PackedScene" uid="uid://cx7qpl641h6f" path="res://dialogue/styles/blue_archive/ba_small_balloon.tscn" id="3_8pplo"]
 [ext_resource type="Resource" uid="uid://ddxa7yncr00vt" path="res://dialogue/scenario/Abydos-1-1.dialogue" id="4_bod8d"]
 
 [node name="VisualNovelScene" type="Node2D"]
 script = ExtResource("1_btyv3")
 Balloon = ExtResource("2_22bjo")
-SmallBalloon = ExtResource("3_8pplo")
+SmallBalloon = ExtResource("2_22bjo")
 dialogue_resource = ExtResource("4_bod8d")

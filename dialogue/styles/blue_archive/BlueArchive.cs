@@ -2,7 +2,7 @@ using Godot;
 using DialogueManagerRuntime;
 using System.Threading.Tasks;
 
-public partial class BATestScene : Node2D
+public partial class BlueArchive : Node2D
 {
     [Export] PackedScene Balloon;
 

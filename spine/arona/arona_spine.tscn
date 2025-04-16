@@ -9,13 +9,14 @@ atlas_res = ExtResource("1_hi4c2")
 skeleton_file_res = ExtResource("2_gr0qj")
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_dhqah")
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 skeleton_data_res = SubResource("SpineSkeletonDataResource_8oxyv")
 preview_skin = "default"
-preview_animation = "25"
+preview_animation = "14"
 preview_frame = false
 preview_time = 0.0
-position = Vector2(196, 602)
-scale = Vector2(0.360321, 0.360321)
+position = Vector2(-3, 263)
+scale = Vector2(0.5, 0.5)

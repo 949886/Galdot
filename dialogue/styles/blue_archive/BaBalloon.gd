@@ -6,9 +6,11 @@ extends CanvasLayer
 # Member variables
 @onready var balloon: Panel = %Balloon
 @onready var character_label: Label = %CharacterName
+@onready var subtitle_label: Label = %SubtitleLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 @onready var audio_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var arona: SpineCharacter = $Spine
 
 var resource: Resource
 var temporary_game_states: Array = []
@@ -40,12 +42,17 @@ func _ready() -> void:
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 	# If the responses menu doesn't have a next action set, use this one
+	responses_menu.response_selected.connect(_on_responses_menu_response_selected)
 	if responses_menu.next_action.is_empty():
 		responses_menu.next_action = next_action
 		
 	mutation_cooldown.timeout.connect(_on_mutation_cooldown_timeout)
 	add_child(mutation_cooldown)
 
+	subtitle_label.text = ""
+	
+	JS.add_callback(arona.set_expression, "changeExpression")
+	
 # Handle unhandled input
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
@@ -85,9 +92,6 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 		
 #region Signals
 
-func _on_response_selected(response: DialogueResponse) -> void:
-	next(response.next_id)
-
 func _on_mutation_cooldown_timeout() -> void:
 	if will_hide_balloon:
 		will_hide_balloon = false
@@ -97,6 +101,9 @@ func _on_mutated(_mutation: Dictionary) -> void:
 	is_waiting_for_input = false
 	will_hide_balloon = true
 	mutation_cooldown.start(0.1)
+
+func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
+	next(response.next_id)
 
 
 # Start the dialogue
@@ -127,6 +134,8 @@ func apply_dialogue_line() -> void:
 	balloon.show()
 	will_hide_balloon = false
 
+	set_character_expression()	
+
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()
@@ -143,7 +152,14 @@ func apply_dialogue_line() -> void:
 				audio_player.stream = load(audio_folder + "/" + filename)
 				audio_player.play()
 				await audio_player.finished
-
+#				play_audio(filename)
+#			if tag.begins_with("mood"):
+#				var mood := tag.split(":")[1].strip_edges()
+#				print("Mood: ", mood)
+#				spine.set_expression(mood)
+		
+#	await dialogue_label.finished_typing
+	
 	# Wait for input
 	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
@@ -161,3 +177,23 @@ func apply_dialogue_line() -> void:
 ## Go to the next line
 func next(next_id: String) -> void:
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
+	
+func play_audio(filename: String) -> void:
+	if audio_player.is_playing():
+		await audio_player.finished
+	audio_player.stream = load(audio_folder + "/" + filename)
+	audio_player.play()
+
+func set_character_expression():
+	if dialogue_line.tags.size() > 0:
+		for tag in dialogue_line.tags:
+			if tag.begins_with("mood"):
+				var mood := tag.split(":")[1].strip_edges()
+				print("Mood: ", mood)
+				arona.set_expression(mood)
+	
+#	var mood = dialogue_line.get_tag_value("mood")
+#	spine.set_expression(mood)
+
+func hide_arona():
+	arona.visible = false

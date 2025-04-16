@@ -12,7 +12,8 @@ config_version=5
 
 config/name="Gal"
 run/main_scene="res://dialogue/styles/blue_archive/blue_archive.tscn"
-config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,11 +21,16 @@ config/icon="res://icon.svg"
 Events="*res://examples/events.gd"
 State="*res://examples/state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Global="*res://Global.gd"
 
 [dialogue_manager]
 
-runtime/advanced/uses_dotnet=true
-runtime/balloon_path="res://dialogue/styles/blue_archive_gd/Balloon.tscn"
+runtime/balloon_path="res://dialogue/styles/1/balloon.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 

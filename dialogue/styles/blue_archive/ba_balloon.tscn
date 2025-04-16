@@ -123,6 +123,9 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 5
 
+[node name="Spine" parent="." instance=ExtResource("8_hnmia")]
+position = Vector2(599, 409)
+
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -178,7 +181,7 @@ theme = ExtResource("4_a0r7k")
 theme_override_font_sizes/font_size = 36
 text = "圣娅"
 
-[node name="Subtitle" type="Label" parent="Balloon/Dialogue/VBoxContainer/HBoxContainer"]
+[node name="SubtitleLabel" type="Label" parent="Balloon/Dialogue/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
@@ -230,7 +233,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
 script = ExtResource("6_sexfa")
-response_template = NodePath("../BoxContainer/ResponseExample4")
+response_template = NodePath("Choice")
 
 [node name="Panel" type="Panel" parent="Choices/ResponsesMenu"]
 custom_minimum_size = Vector2(0, 21.925)
@@ -370,6 +373,3 @@ expand_mode = 2
 stretch_mode = 4
 flip_h = true
 flip_v = true
-
-[node name="Node2D" parent="." instance=ExtResource("8_hnmia")]
-position = Vector2(394, -94)
